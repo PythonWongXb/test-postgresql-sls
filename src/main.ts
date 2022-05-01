@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2022-03-16 17:08:50
- * @LastEditTime: 2022-05-01 20:39:50
+ * @LastEditTime: 2022-05-01 21:03:00
  * @LastEditors: Please set LastEditors
  * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  * @FilePath: /iluvcoffee/src/main.ts
@@ -52,7 +52,7 @@ async function bootstrap() {
         port: 9000,
       },
     };
-  const port = portMap[process.env.NODE_ENV]?.port || 5000;
+  const port = portMap[process.env.NODE_ENV]?.port || 9000;
   const logger = new MyLoggerService()
   logger.setContext('APP')
   logger.verbose(`${process.env.NODE_ENV}, 'server running at', ${port}`);
