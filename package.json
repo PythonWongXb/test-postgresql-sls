@@ -7,7 +7,7 @@
   "license": "UNLICENSED",
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "nest build --webpack --webpackPath=./webpack.config.js",
+    "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "preserve:e2e": "docker-compose up -d db",
     "postserve:e2e": "docker-compose stop db && docker-compose rm -f db",

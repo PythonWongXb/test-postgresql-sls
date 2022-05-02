@@ -10,7 +10,15 @@ module.exports = {
   target: 'node',
   // 置为空即可忽略webpack-node-externals插件
   externals: [
-    nodeExternals(),
+    // nodeExternals(),
+    'pg-native',
+    'fastify-swagger',
+    'nock',
+    'aws-sdk',
+    'mock-aws-s3',
+    'npm',
+    '@mapbox',
+    'node-gyp',
   ],
   // ts文件的处理
   module: {
@@ -45,6 +53,7 @@ module.exports = {
           'class-validator',
           'class-transformer',
           'class-transformer/storage',
+          'npm',
         ];
         if (!lazyImports.includes(resource)) {
           return false;
@@ -58,6 +67,10 @@ module.exports = {
         }
         return false;
       },
+    }),
+    new webpack.IgnorePlugin({
+      resourceRegExp: /\.html$/,
+      contextRegExp: /@mapbox\/node-pre-gyp/
     }),
     new ForkTsCheckerWebpackPlugin(),
   ],
