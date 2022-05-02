@@ -7,7 +7,7 @@
   "license": "UNLICENSED",
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "nest build",
+    "build": "nest build --webpack --webpackPath=./webpack.config.js",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "preserve:e2e": "docker-compose up -d db",
     "postserve:e2e": "docker-compose stop db && docker-compose rm -f db",
@@ -47,7 +47,8 @@
     "rimraf": "^3.0.2",
     "rxjs": "^6.5.4",
     "swagger-ui-express": "^4.1.4",
-    "typeorm": "^0.2.25"
+    "typeorm": "^0.2.25",
+    "webpack-node-externals": "^3.0.0"
   },
   "devDependencies": {
     "@nestjs/cli": "^7.0.0",
@@ -63,6 +64,7 @@
     "eslint": "7.1.0",
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-import": "^2.20.1",
+    "fork-ts-checker-webpack-plugin": "^7.2.11",
     "jest": "26.0.1",
     "prettier": "^1.19.1",
     "supertest": "^4.0.2",

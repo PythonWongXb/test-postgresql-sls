@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2022-04-10 18:10:26
- * @LastEditTime: 2022-04-20 18:14:32
+ * @LastEditTime: 2022-05-02 17:02:26
  * @LastEditors: Please set LastEditors
  * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  * @FilePath: /nest-server/src/coffees/coffees.controller.ts
@@ -16,8 +16,8 @@ import { Public } from '../common/decorators/public.decorator';
 import { Protocol } from '../common/decorators/protocol.decorator';
 import { ApiForbiddenResponse, ApiTags } from '@nestjs/swagger';
 import { AuthGuard } from '@nestjs/passport';
-import { GetUser } from 'src/auth/get-user.decorator';
-import { User } from 'src/auth/user.entity';
+import { GetUser } from './../auth/get-user.decorator';
+import { User } from './../auth/user.entity';
 
 @ApiTags('coffees')
 @UseGuards(AuthGuard())

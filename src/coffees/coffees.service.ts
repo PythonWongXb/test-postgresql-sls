@@ -7,9 +7,9 @@ import { UpdateCoffeeDto } from './dto/update-coffee.dto';
 import { Event } from '../events/entities/event.entity';
 import { Coffee } from './entities/coffee.entity';
 import { Flavor } from './entities/flavor.entity';
-import { User } from 'src/auth/user.entity';
-import { GetUser } from 'src/auth/get-user.decorator';
-import { MyLoggerService } from 'src/logger/logger.service';
+import { User } from './../auth/user.entity';
+import { GetUser } from './../auth/get-user.decorator';
+import { MyLoggerService } from './../logger/logger.service';
 
 @Injectable()
 export class CoffeesService {
